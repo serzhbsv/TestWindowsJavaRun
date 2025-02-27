@@ -1,6 +1,10 @@
 name: Default SDK version Workflow
 
-on: [push]
+on:
+  push:
+    branches:
+  pull_request:
+    branches:
 
 jobs:
   default-sdk-version:
