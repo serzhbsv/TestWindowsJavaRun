@@ -1,0 +1,14 @@
+name: Default SDK version Workflow
+
+on: [push]
+
+jobs:
+  default-sdk-version:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-java@v4
+      with:
+         distribution: 'microsoft'
+         java-version: '21'
+    - run: java -cp java HelloWorldApp
